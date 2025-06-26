@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Learning Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="animated-bg">
+    <div class="form-container">
+      <h2>Register to Learn</h2>
+      <form action="login.html" method="get">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="10" required />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <label><input type="radio" name="gender" value="Male" required /> Male</label>
+          <label><input type="radio" name="gender" value="Female" required /> Female</label>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Create Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="course">Select Course</label>
+          <select id="course" name="course" required>
+            <option value="">--Choose--</option>
+            <option value="java">Java Programming</option>
+            <option value="web">Web Development</option>
+            <option value="python">Python Basics</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Education (Select all that apply):</label>
+          <label><input type="checkbox" name="education" value="10th" /> 10th</label>
+          <label><input type="checkbox" name="education" value="12th" /> 12th</label>
+          <label><input type="checkbox" name="education" value="graduation" /> Graduation</label>
+          <label><input type="checkbox" name="education" value="postgrad" /> Post-Graduation</label>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" required />
+            <span class="terms">I agree to the Terms & Conditions</span>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
