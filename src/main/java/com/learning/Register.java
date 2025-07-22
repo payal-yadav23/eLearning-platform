@@ -28,6 +28,8 @@ public class Register extends HttpServlet {
 		String pass = req.getParameter("password");
 		String course = req.getParameter("course");
 
+		resp.setContentType("text/html");
+
 		// JDBC Connection
 
 		try {
@@ -46,7 +48,7 @@ public class Register extends HttpServlet {
 
 			PrintWriter out = resp.getWriter();
 			if (check > 0) {
-				out.print("<h3 style='color: green; font-weight: bold;'>✅ Registered Successfully!</h3>");
+				out.print("<h3 style='color: green; font-weight: bold;'>"+"✅ Registered Successfully!"+"</h3>");
 
 				RequestDispatcher rd = req.getRequestDispatcher("login.html");
 				rd.include(req, resp);
