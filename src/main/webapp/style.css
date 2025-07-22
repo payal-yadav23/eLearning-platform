@@ -1,0 +1,141 @@
+@charset "ISO-8859-1";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #0a0f1a, #141d2b, #1a2a3c);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px; /* add space around edges */
+}
+
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.floating-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  min-height: 600px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px #00adb5, 0 0 30px #00adb5;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+.panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.form-section {
+  background: #131f33;
+  animation: slideInFromRight 1s ease forwards;
+}
+
+.info-section {
+  background: #0d1b2a;
+  animation: slideInFromLeft 1s ease forwards;
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.brand {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #00adb5;
+  text-shadow: 0 0 10px #00adb5, 0 0 20px #00adb5;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #e94560;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #0f3460;
+  color: white;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus, select:focus {
+  background: #1e488f;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ff6f61;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .floating-box {
+    flex-direction: column;
+    height: auto;
+  }
+}
