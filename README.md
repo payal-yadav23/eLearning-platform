@@ -45,6 +45,17 @@ eLearning-platform/
 └── README.md
 ```
 
+## 📸 Project Screenshots
+
+### 🔹 Welcome Page
+![Welcome](screenshots/welcome.png)
+
+### 🔹 Register & Login Page
+![Register and Login](screenshots/register_login.png)
+
+### 🔹 Registration Success Page
+![Success](screenshots/registersuccess.png)
+
 ## ⚙️ How to Run
 
 1. **Clone the Repository**:
